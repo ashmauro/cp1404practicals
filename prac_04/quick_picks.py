@@ -8,6 +8,7 @@ TOTAL_NUMBERS = 6
 MIN_RANDOM = 1
 MAX_RANDOM = 45
 
+
 def main():
     """Displays lists"""
     quick_picks = amount_picks()
