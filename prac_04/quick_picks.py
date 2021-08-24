@@ -33,8 +33,12 @@ def generate_picks(number_picks):
             while random_number in quick_pick_list:  # Checks to see if number is already in list
                 random_number = random.randint(MIN_RANDOM, MAX_RANDOM)  # Generates new number if double-up
             quick_pick_list.append(random_number)  # appends rand number to list
-        quick_pick_list.sort()  # Sorts list into ascending numbers
-        print(quick_pick_list)  # prints list
+            quick_pick_list.sort()  # Sorts list into ascending numbers
+
+        print_quick_pick = ""
+        for random_number in quick_pick_list:
+            print_quick_pick += f"{random_number:2}"
+        print(print_quick_pick)
 
 
 main()
