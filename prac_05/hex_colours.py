@@ -1,7 +1,6 @@
 """
-
-
-
+CP1404/CP5632 Practical
+Hex colours in a dictionary
 """
 
 COLOUR_CODES = {"AliceBlue": "#f0f8ff", "aquamarine2": "#76eec6", "blue1": "#0000ff", "brown": "#a52a2a",
