@@ -1,23 +1,23 @@
 """
-
-
-
+CP1404/CP5632 Practical
+word occurrences
 """
-
-word_to_count = {}
-
+# Text: this is a collection of words of nice words this is a fun thing it is
 text = input("Text: ")
-
 words = text.split()
 
-for word in words:
-    count_word = word_to_count.get(word,0)
-    word_to_count[word] = count_word + 1
+word_count_dict = {}
 
-#  Creates list from dictionary and sorts
-words = list(word_to_count.keys())
+for word in words:  # for loop to create a dictionary of all words and their count
+    if word in word_count_dict:
+        word_count_dict[word] += 1
+    else:
+        word_count_dict[word] = 1
+
+#  Creates list from dictionary keys and sorts
+words = list(word_count_dict.keys())
 words.sort()
 
-max_length = max(len(word) for word in words)
+max_length = max(len(word) for word in words)  # max length of word for dynamic formatting
 for word in words:
-    print("{:{}} : {}".format(word, max_length, word_to_count[word]))
+    print("{:{}} : {}".format(word, max_length, word_count_dict[word]))
