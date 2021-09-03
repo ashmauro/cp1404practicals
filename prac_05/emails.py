@@ -11,7 +11,7 @@ def main():
     while email != "":
         user_name = get_name(email)
         user_confirmation = input("Is you name {}? (Y or N)".format(user_name))
-        if user_confirmation.upper() == "N" and user_confirmation != "":
+        if user_confirmation.upper() == "N" or user_confirmation == " ":
             user_name = input("Name: ")
         email_dict[email] = user_name
         email = input("Email: ")
