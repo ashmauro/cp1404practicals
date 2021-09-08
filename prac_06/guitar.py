@@ -20,12 +20,8 @@ class Guitar:
 
     def get_age(self):
         """Calculate age"""
-        self.age = 2021 - self.year
-        return self.age
+        return 2021 - self.year
 
     def is_vintage(self):
         """Check if vintage"""
-        if self.age >= 50:
-            return True
-        else:
-            return False
+        return self.get_age() >= 50
