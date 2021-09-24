@@ -2,12 +2,12 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import StringProperty
 
-MILES_TO_KM = 1.60934
+CONVERSION_FACTOR = 1.60934
 
 
 class ConvertMilesApp(App):
     """ConvertMilesApp is a kivy app that converts miles to km's."""
-    message = StringProperty()
+    output = StringProperty()
 
     def build(self):
         """Build Kivy app from kv file."""
@@ -18,8 +18,7 @@ class ConvertMilesApp(App):
     def handle_conversion(self):
         """handle_conversion executes the conversion form miles to km's."""
         value = self.validate_input()
-        result = float(value) * MILES_TO_KM
-        self.root.ids.output_label.text = str(result)
+        self.root.ids.output_label.text = str(float(value) * CONVERSION_FACTOR)
 
     def validate_input(self):
         """Validates if the input was a number"""
