@@ -1,3 +1,10 @@
+"""
+CP1404 Practical 07
+Miles to Kilmeters converter Kivy GUI program
+Ashley Mauro
+Started 21/09/2021
+"""
+
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import StringProperty
