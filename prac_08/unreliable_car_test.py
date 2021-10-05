@@ -1,6 +1,6 @@
 """"
 CP1404/CP5632 Practical
-Taxi class
+Unreliable Car Test
 """
 
 from prac_08.unreliable_car import UnreliableCar
