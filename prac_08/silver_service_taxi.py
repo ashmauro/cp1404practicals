@@ -14,7 +14,7 @@ class SilverServiceTaxi(Taxi):
         """Initialise a Silver Service Taxi ."""
         super().__init__(name, fuel)
         self.fanciness = fanciness
-        self.price_per_km *= fanciness * Taxi.price_per_km
+        self.price_per_km = fanciness * Taxi.price_per_km
 
     def __str__(self):
         """Return a string like a Car but with current fare distance."""
