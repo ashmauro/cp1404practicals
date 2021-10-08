@@ -52,7 +52,7 @@ def get_taxi(taxis):
     taxi_chosen = None
     valid_input = False
     while not valid_input:
-        # try:
+        try:
             taxi_chosen = int(input("Choose taxi: "))
 
             if taxi_chosen >= len(taxis):
@@ -64,15 +64,13 @@ def get_taxi(taxis):
             else:
                 valid_input = True
 
-        # except ValueError:
-        #     print("enter a valid number")
+        except ValueError:
+            print("Enter a valid number")
     return taxi_chosen
 
 
 def get_distance():
-    """
-
-    """
+    """ Returns distance wanted to drive."""
     distance = 0
     try:
         distance = int(input("Drive how far? "))
