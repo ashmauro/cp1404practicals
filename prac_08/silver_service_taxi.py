@@ -3,7 +3,6 @@ CP1404/CP5632 Practical
 Silver Service Taxi class
 """
 from prac_08.taxi import Taxi
-from random import randint
 
 
 class SilverServiceTaxi(Taxi):
