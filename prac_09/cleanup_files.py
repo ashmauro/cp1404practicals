@@ -42,7 +42,24 @@ def main():
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
     new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
-    return new_name
+    temp = []
+    for index, character in enumerate(new_name):  # Iterate through each character in filename
+
+        if character.isupper() and index != 0:  # if character is uppercase and index of character is not 0
+
+            if new_name[index-1] != '_':  # if the character before is not an underscore than add one
+                temp.append('_')
+                temp.append(character)
+            else:
+                temp.append(character)
+        # if character before is a bracket and character is lowercase than change to upper case.
+        elif new_name[index - 1] == "(" and character.islower():
+            temp.append(character.upper())
+        else:
+            temp.append(character)
+    # updated_name = "".join(temp)
+    # print(updated_name)
+    return "".join(temp)
 
 
 def demo_walk():
