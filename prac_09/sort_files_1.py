@@ -16,7 +16,7 @@ def main():
             os.mkdir(extension)
         except FileExistsError:
             pass
-    move_files()
+    sort_files()
 
 
 def get_file_extensions():
@@ -30,7 +30,7 @@ def get_file_extensions():
     return file_extensions
 
 
-def move_files():
+def sort_files():
     """Move files into specific folders"""
     for directory_name, subdirectories, filenames in os.walk('.'):
         for filename in filenames:
