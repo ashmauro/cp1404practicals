@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical
-Demos of various os module examples
+OS_demos
 """
 import shutil
 import os
